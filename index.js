@@ -77,11 +77,7 @@ open({
     }
     return res.json({ nickname, email, password, token });
   });
-  // app.post('/people/exit', async (res,req) => {
-  //   await db.run(`Update People set token ="${token}" where email = "${email}"`), (res) => {
-  //     return res.json({message: 'Вы покинули церковь и пошли кушать свинину в мечети '})
-  //   }
-  // })
+
   //.......addTeam......................
   app.post('/profile/team', authMiddleWare, async (req, res) => {
     const team = { teamName, captain, game } = req.body
